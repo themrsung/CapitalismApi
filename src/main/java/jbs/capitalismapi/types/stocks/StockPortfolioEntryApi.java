@@ -40,6 +40,46 @@ public class StockPortfolioEntryApi {
     // 매입일
     Date purchaseDate = null;
 
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public double getPurchasePrice() {
+        return purchasePrice;
+    }
+
+    public Date getPurchaseDate() {
+        return purchaseDate;
+    }
+
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setPurchasePrice(double purchasePrice) {
+        this.purchasePrice = purchasePrice;
+    }
+
+    public void setPurchaseDate(Date purchaseDate) {
+        this.purchaseDate = purchaseDate;
+    }
+
     public StockPortfolioEntryApiData toData() {
         StockPortfolioEntryApiData data = new StockPortfolioEntryApiData();
 
