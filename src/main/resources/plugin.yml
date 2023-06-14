@@ -1,0 +1,4 @@
+name: CapitalismApi
+version: '${project.version}'
+main: jbs.capitalismapi.CapitalismApi
+api-version: 1.20
