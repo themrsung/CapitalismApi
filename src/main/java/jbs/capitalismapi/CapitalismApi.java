@@ -43,19 +43,19 @@ public final class CapitalismApi extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Bukkit.getLogger().info("CapitalismApi v" + CapitalismApi.version + "is loading...");
+        Bukkit.getLogger().info("CapitalismApi v" + CapitalismApi.version + " is loading...");
 
         loadData();
 
         Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new ApiAutoSaver(this), 20, 20);
 
-        Bukkit.getLogger().info("CapitalismApi v" + CapitalismApi.version + "is loaded!");
+        Bukkit.getLogger().info("CapitalismApi v" + CapitalismApi.version + " is loaded!");
 
     }
 
     @Override
     public void onDisable() {
-        Bukkit.getLogger().info("CapitalismApi v" + CapitalismApi.version + "is shutting down.");
+        Bukkit.getLogger().info("CapitalismApi v" + CapitalismApi.version + " is shutting down.");
         saveData();
     }
 
