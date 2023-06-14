@@ -1,6 +1,7 @@
 package jbs.capitalismapi.types.entities.companies;
 
 import jbs.capitalismapi.CapitalismApi;
+import jbs.capitalismapi.savetypes.entities.EconomicEntityApiType;
 import jbs.capitalismapi.savetypes.entities.companies.CompanyApiData;
 import jbs.capitalismapi.savetypes.entities.players.PlayerApiData;
 import jbs.capitalismapi.types.bonds.BondApi;
@@ -147,6 +148,8 @@ public class CompanyApi extends EconomicEntityApi {
         }
 
         if (ceo != null) data.ceoUuid = ceo.getUuid().toString();
+
+        data.type = EconomicEntityApiType.COMPANY_API;
 
         return data;
     }

@@ -1,5 +1,6 @@
 package jbs.capitalismapi.types.entities.players;
 
+import jbs.capitalismapi.savetypes.entities.EconomicEntityApiType;
 import jbs.capitalismapi.savetypes.entities.players.PlayerApiData;
 import jbs.capitalismapi.types.entities.EconomicEntityApi;
 
@@ -110,6 +111,8 @@ public class PlayerApi extends EconomicEntityApi {
         data.enderChestValue = enderChestValue;
         data.itemOrderCollateralValue = itemOrderCollateralValue;
         data.unreceivedCommodityPortfolioValue = unreceivedCommodityPortfolioValue;
+
+        data.type = EconomicEntityApiType.PLAYER_API;
 
         return data;
     }

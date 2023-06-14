@@ -1,6 +1,7 @@
 package jbs.capitalismapi.types.entities;
 
 import jbs.capitalismapi.savetypes.entities.EconomicEntityApiData;
+import jbs.capitalismapi.savetypes.entities.EconomicEntityApiType;
 import jbs.capitalismapi.savetypes.navigation.LocationApiData;
 import jbs.capitalismapi.types.bonds.BondApi;
 import jbs.capitalismapi.types.stocks.StockPortfolioApi;
@@ -153,7 +154,7 @@ public class EconomicEntityApi {
         }
 
         data.stockOrderCollateralValue = stockOrderCollateralValue;
-        data.addressData = new LocationApiData(
+        if (address != null) data.addressData = new LocationApiData(
                 address.getWorld().getName(),
                 address.getX(),
                 address.getY(),
@@ -161,6 +162,8 @@ public class EconomicEntityApi {
                 address.getYaw(),
                 address.getPitch()
         );
+
+        data.type = EconomicEntityApiType.ECONOMIC_ENTITY_API;
 
         return data;
     }
