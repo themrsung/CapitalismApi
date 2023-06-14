@@ -1,13 +1,13 @@
 package jbs.capitalismapi.savetypes.entities.players;
 
 import jbs.capitalismapi.savetypes.entities.EconomicEntityApiData;
-import jbs.capitalismapi.types.entities.players.CapitalismPlayerApiRank;
+import jbs.capitalismapi.types.entities.players.PlayerApiRank;
 
 import javax.annotation.Nullable;
 import java.util.Date;
 
-public class PlayerData extends EconomicEntityApiData {
-    public CapitalismPlayerApiRank rank = CapitalismPlayerApiRank.UNEMPLOYED;
+public class PlayerApiData extends EconomicEntityApiData {
+    public PlayerApiRank rank = PlayerApiRank.UNEMPLOYED;
     public boolean premium = false;
     @Nullable
     public Date premiumExpiryDate = null;

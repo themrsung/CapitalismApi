@@ -13,5 +13,6 @@ public class CompanyApiData extends EconomicEntityApiData {
     public int shareCount = 1;
     public ArrayList<String> employeeUuids = new ArrayList<String>();
     public ArrayList<String> directorUuids = new ArrayList<String>();
-    @Nullable public String ceoUuid = null;
+    @Nullable
+    public String ceoUuid = null;
 }

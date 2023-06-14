@@ -1,6 +1,6 @@
 package jbs.capitalismapi.types.entities.players;
 
-public enum CapitalismPlayerApiRank {
+public enum PlayerApiRank {
     UNEMPLOYED,
     EMPLOYEE,
     DIRECTOR,
