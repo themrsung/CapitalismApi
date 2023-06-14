@@ -17,6 +17,11 @@ import java.util.ArrayList;
 
 public class ApiData {
     public ApiData(
+            ArrayList<EconomicEntityApi> entities
+    ) {
+        this.entities = entities;
+    }
+    public ApiData(
             ArrayList<EconomicEntityApi> entities,
             ArrayList<EconomicEntityApiData> entityData
     ) {

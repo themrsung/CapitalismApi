@@ -136,6 +136,10 @@ public class EconomicEntityApi {
         this.stockOrderCollateralValue = stockOrderCollateralValue;
     }
 
+    public void setAddress(@Nullable Location address) {
+        this.address = address;
+    }
+
     public EconomicEntityApiData toData() {
         EconomicEntityApiData data = new EconomicEntityApiData();
 
