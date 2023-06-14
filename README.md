@@ -18,7 +18,7 @@ Code is commented in both English and Korean.
 #### What this API can do
 
 You can access **Capitalism**'s data, which is updated every 50 ticks (2.5s).
-If there is a change in the API's state, it will affect other plugins that utilize this API, but not **Capitalism** itself.
+If there is a change in the APIs state, it will affect other plugins that utilize this API, but not **Capitalism** itself.
 
 #### How to use this API
 
@@ -33,4 +33,4 @@ For example, let's say you are trying to get the stock price of a certain stock 
 If you use the main plugin instance, you could get the latest value, but the plugin will loop through all stock exchanges, then loop through all stock listings to find the highest price.
 This will be very laggy, for obvioud reasons.
 
-However, this can be overcome by using the API's cached value. Moreover, **Capitalism**'s source code is not public.
+However, this can be overcome by using the APIs cached value. Moreover, **Capitalism**'s source code is not public.
