@@ -1,6 +1,22 @@
 package jbs.capitalismapi.savetypes.navigation;
 
 public class LocationApiData {
+    public LocationApiData(
+            String world,
+            double x,
+            double y,
+            double z,
+            float yaw,
+            float pitch
+    ) {
+        this.world = world;
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.yaw = yaw;
+        this.pitch = pitch;
+    }
+
     public String world = "world";
     public double x = 0d;
     public double y = 0d;

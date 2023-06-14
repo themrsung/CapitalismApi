@@ -1,6 +1,8 @@
 package jbs.capitalismapi;
 
 import jbs.capitalismapi.types.entities.EconomicEntityApi;
+import jbs.capitalismapi.types.entities.players.PlayerApi;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.annotation.Nullable;
@@ -14,9 +16,22 @@ public final class CapitalismApi extends JavaPlugin {
     public ArrayList<EconomicEntityApi> getEntities() {
         return entities;
     }
-    @Nullable EconomicEntityApi getEntity(UUID uuid) {
+    @Nullable
+    public EconomicEntityApi getEntity(UUID uuid) {
         for (EconomicEntityApi eea : entities) {
             if (eea.getUuid().equals(uuid)) return eea;
+        }
+
+        return null;
+    }
+    @Nullable
+    public PlayerApi getPlayer(UUID uuid) {
+        EconomicEntityApi entity = getEntity(uuid);
+
+        if (entity != null) {
+            if (entity instanceof PlayerApi) {
+                return (PlayerApi) entity;
+            }
         }
 
         return null;
@@ -25,11 +40,11 @@ public final class CapitalismApi extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
     }
+
 }

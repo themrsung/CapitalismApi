@@ -7,6 +7,12 @@ import javax.annotation.Nullable;
 import java.util.Date;
 
 public class PlayerApiData extends EconomicEntityApiData {
+    // Used in PlayerApi.toData()
+    public PlayerApiData(EconomicEntityApiData data) {
+        super(data);
+    }
+    public PlayerApiData() { super(); }
+
     public PlayerApiRank rank = PlayerApiRank.UNEMPLOYED;
     public boolean premium = false;
     @Nullable

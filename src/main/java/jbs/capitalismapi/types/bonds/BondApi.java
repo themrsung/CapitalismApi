@@ -22,11 +22,27 @@ public class BondApi {
         this.expiration = expiration;
     }
     public BondApi() {}
+
+    // UUID of this bond
+    // 채권의 UUID
     UUID uuid = null;
+
+    // Debtor of this bond
+    // 채무자
     EconomicEntityApi debtor = null;
+
+    // Creditor of this bond
+    // 채권자
     EconomicEntityApi creditor = null;
+
+    // Total amount due on expiration
+    // 만기일에 지급할 원리금 총액
     double amount;
+
+    // Expiry
+    // 만기일
     Date expiration;
+
 
     public UUID getUuid() {
         return uuid;
@@ -48,16 +64,36 @@ public class BondApi {
         return expiration;
     }
 
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
+    }
+
+    public void setDebtor(EconomicEntityApi debtor) {
+        this.debtor = debtor;
+    }
+
+    public void setCreditor(EconomicEntityApi creditor) {
+        this.creditor = creditor;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public void setExpiration(Date expiration) {
+        this.expiration = expiration;
+    }
+
     public BondApiData toData() {
-        BondApiData bad = new BondApiData();
+        BondApiData data = new BondApiData();
 
-        bad.uuid = uuid.toString();
-        bad.debtorUuid = debtor.getUuid().toString();
-        bad.creditorUuid = creditor.getUuid().toString();
-        bad.amount = amount;
-        bad.expiration = expiration;
+        data.uuid = uuid.toString();
+        data.debtorUuid = debtor.getUuid().toString();
+        data.creditorUuid = creditor.getUuid().toString();
+        data.amount = amount;
+        data.expiration = expiration;
 
-        return bad;
+        return data;
     }
 
     public static BondApi fromData(BondApiData data, CapitalismApi plugin) {
@@ -65,8 +101,8 @@ public class BondApi {
                 UUID.fromString(data.uuid),
                 plugin.getEntity(UUID.fromString(data.debtorUuid)),
                 plugin.getEntity(UUID.fromString(data.creditorUuid)),
-                amount,
-                expiration
+                data.amount,
+                data.expiration
         );
     }
 }

@@ -6,6 +6,11 @@ import javax.annotation.Nullable;
 import java.util.ArrayList;
 
 public class CompanyApiData extends EconomicEntityApiData {
+    // Used in CompanyApi.toData()
+    public CompanyApiData(EconomicEntityApiData entityData) {
+        super(entityData);
+    }
+    public CompanyApiData() { super(); }
     public String symbol = null;
     @Nullable
     public String description = null;
