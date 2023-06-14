@@ -17,13 +17,15 @@ Code is commented in both English and Korean.
 
 #### What this API can do
 
-You can access **Capitalism**'s data, which is updated every 50 ticks (2.5s).
+You can access **Capitalism**s data, which is updated every 50 ticks (2.5s).
 If there is a change in the APIs state, it will affect other plugins that utilize this API, but not **Capitalism** itself.
 
 #### How to use this API
 
 Access the plugin's data by calling **Bukkit.getPluginManager().getPlugin("CapitalismApi")**.
 Creating a new instance and using save/load is very inefficient, and is not recommended.
+
+Add **Capitalism** and **CapitalismApi** as dependencies to your **plugin.yml**.
 
 #### Can't I just get the main plugin's instance?
 
