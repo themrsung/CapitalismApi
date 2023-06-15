@@ -1,6 +1,6 @@
 # CapitalismApi v5.0
 
-### Supports: Capitalism v5.1.3 or higher
+### Supports: Capitalism v5.1.4 or higher
 
 This is an open source API for the Minecraft plugin **Capitalism** developed by themrsung.
 Use this API to access data in the main plugin from other modules.
