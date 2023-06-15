@@ -16,6 +16,7 @@ public class LocationApiData {
         this.yaw = yaw;
         this.pitch = pitch;
     }
+    public LocationApiData() {}
 
     public String world = "world";
     public double x = 0d;
