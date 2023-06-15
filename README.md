@@ -1,4 +1,4 @@
-# CapitalismApi v5.0
+# CapitalismApi v5.0 - 
 
 ### Supports: Capitalism v5.1.3 or higher
 
