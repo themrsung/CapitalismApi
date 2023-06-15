@@ -19,6 +19,17 @@ public final class CapitalismApi extends JavaPlugin {
     public ArrayList<EconomicEntityApi> getEntities() {
         return entities;
     }
+    public ArrayList<PlayerApi> getPlayer() {
+        ArrayList<PlayerApi> players = new ArrayList<PlayerApi>();
+
+        for (EconomicEntityApi entity : entities) {
+            if (entity instanceof PlayerApi) {
+                players.add((PlayerApi) entity);
+            }
+        }
+
+        return players;
+    }
 
     @Nullable
     public EconomicEntityApi getEntity(UUID uuid) {
